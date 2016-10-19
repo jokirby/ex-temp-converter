@@ -1,14 +1,31 @@
-// var input =  
-
 function toCelsius () {
-	var f2c = (document.getElementById("temp_input").value - 32) * (5/9);
-	alert(f2c);
+	var f2c = Math.round((document.getElementById("temp_input").value - 32) * (5/9));
+		if (f2c > 32) {
+			var output = document.getElementById("hot");
+			 output.innerHTML = "Phew! It's hot out here! It's " + f2c + "degrees Celcius today.";
+		} else if (f2c < 0) {
+			var output = document.getElementById("cold");
+				output.innerHTML = "Better get your coat out, it's " + f2c + "degrees Celcius today.";
+		} else if (0 < f2c < 32) {
+			var output = document.getElementById("norm");
+				output.innerHTML = "Here is your converted temp: " + f2c + "degrees Celcius";
+		}
 }
 
 function toFahrenheit () {
-	var c2f = document.getElementById("temp_input").value * 1.8 + 32;
-	alert(c2f);
+	var c2f = Math.round(document.getElementById("temp_input").value * 1.8 + 32);
+	if (c2f > 90) {
+		var output = document.getElementById("hot");
+			 output.innerHTML = "Phew! It's hot out here! It's " + c2f + "degrees Fahrenheit today.";
+	} else if (c2f < 32 ) {
+		var output = document.getElementById("cold");
+				output.innerHTML = "Better get your coat out, it's " + c2f + "degrees Fahrenheit today.";
+	} else if (32 < c2f < 90) {
+		var output = document.getElementById("norm");
+				output.innerHTML = "Here is your converted temp: " + c2f + "degrees Fahrenheit";
+	}
 }
+
 
 // Get a reference to the button element in the DOM
 var buttonConverter = document.getElementById("converter")
@@ -29,6 +46,9 @@ function determineConverter (clickEvent) {
 
 function reset() {
 	document.getElementById("temp_input").value = "";
+	document.getElementById("hot").innerHTML = "";
+	document.getElementById("cold").innerHTML ="";
+	document.getElementById("norm").innerHTML ="";
 }
 
 // Assign a function to be executed when the button is clicked
