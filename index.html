@@ -2,7 +2,10 @@
 <html>
 <head>
 	<title>Temperature Converter</title>
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
 </head>
 <body>
 	<div id="wrapper">
@@ -12,8 +15,9 @@
 
 			<form id="form-style">
 			  Input Temp: <input id="temp_input" type="number" name="temp"><br>
-			  Fahrenheit: <input id="fRadio" type="radio" name="units" value="Fahrenheit">
-			  Celsius: <input id="cRadio" type="radio" name="units" value="Celsius"><br>
+			  <h4>Convert to:</h4> 
+			  Fahrenheit <input id="fRadio" type="radio" name="units" value="Fahrenheit"><br>
+			  Celsius <input id="cRadio" type="radio" name="units" value="Celsius"><br>
 			  <!-- <input type="submit" value="Submit"> -->
 			</form>
 
@@ -23,19 +27,29 @@
 				<button type="button" id="converter">Convert Temp</button>
 				<button type="button" id="clear">Clear</button>
 			</div>
+
+			<div>
+
+				<p id="fOutput"></p>
+
+				<p id="hot"></p>
+				<p id="cold"></p>
+				<p id="norm"></p>
+				
+			</div>
 	</div>
 	<script type="text/javascript" src="converter.js"></script>
 </body>
 </html>
 
-<!-- Write a program that will convert a temperature from fahrenheit to celsius, or from celsius to fahrenheit.
+<!-- Write a program that will convert a temperature from fahrenheit to celsius, or from celsius to fahrenheit. 
 
 In the HTML, have one input field where someone can enter in a temperature.
 Create a radio button group where Celsius or Fahrenheit can be selected as the scale that the number should be converted to.
-Create a block level element that will hold the text of the converted temperature.
+Create a block level element that will hold the text of the converted temperature. woo.
 Create a button that, when clicked, displays the converted temperature.
 Create another button that, when clicked, clears any text in the input field.
 Add an event handler to the input field that checks if the user pressed the enter key, and if that happens, perform the conversion.
 If the temperature is greater than 90F/32C the color of the converted temperature should be red.
 If the temperature is less than 32F/0C the color of the converted temperature should be blue.
-For any other temperature, the color should be green. -->
+For any other temperature, the color should be green. --> 
